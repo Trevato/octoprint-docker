@@ -22,19 +22,19 @@ services:
   # refer to docs on configuration editing for more information
   ####
 
-  #config-editor:
-  #  image: linuxserver/code-server
-  #  ports:
-  #    - 8443:8443
-  #  depends_on:
-  #    - octoprint
-  #  restart: unless-stopped
-  #  environment:
-  #    - PUID=0
-  #    - GUID=0
-  #    - TZ=America/Chicago
-  #  volumes:
-  #    - octoprint:/octoprint
+  config-editor:
+   image: linuxserver/code-server
+   ports:
+     - 8443:8443
+   depends_on:
+     - octoprint
+   restart: unless-stopped
+   environment:
+     - PUID=0
+     - GUID=0
+     - TZ=America/Detroit
+   volumes:
+     - octoprint:/octoprint
 
 volumes:
   octoprint:
